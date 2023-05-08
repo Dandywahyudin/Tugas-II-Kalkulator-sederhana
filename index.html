@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <title>Kalkulator Sederhana</title>
+  </head>
+  <body>
+    <h1>Kalkulator Sederhana Alkademi Pesilat</h1>
+      <input type='text' name='nilai1' placeholder='Masukkan nilai 1' />
+      <input type='text' name='nilai2' placeholder='Masukkan nilai 2' />
+      <input type='text' name='hasil' placeholder='Hasil' /><br><br>
+      <button onclick='tambah()'>+</button>
+      <button onclick='kurang()'>-</button>
+      <button onclick='kali()'>x</button>
+      <button onclick='bagi()'>/</button><br><br>
+      <button onclick='resetInput()'>Reset</button>
+    
+
+    <script language="JavaScript" type="text/javascript">
+      function tambah() {
+        val1 = document.getElementsByName('nilai1')[0].value;
+        val2 = document.getElementsByName('nilai2')[0].value;
+        document.getElementsByName('hasil')[0].value = parseFloat(val1) + parseFloat(val2);
+      }
+      function kurang() {
+        val1 = document.getElementsByName('nilai1')[0].value;
+        val2 = document.getElementsByName('nilai2')[0].value;
+        document.getElementsByName('hasil')[0].value = parseFloat(val1) - parseFloat(val2);
+      }
+      function kali() {
+        val1 = document.getElementsByName('nilai1')[0].value;
+        val2 = document.getElementsByName('nilai2')[0].value;
+        document.getElementsByName('hasil')[0].value = parseFloat(val1) * parseFloat(val2);
+      }
+      function bagi() {
+        val1 = document.getElementsByName('nilai1')[0].value;
+        val2 = document.getElementsByName('nilai2')[0].value;
+        document.getElementsByName('hasil')[0].value = parseFloat(val1) / parseFloat(val2);
+      }
+      function resetInput() {
+        document.getElementsByName('nilai1')[0].value = '';
+        document.getElementsByName('nilai2')[0].value = '';
+        document.getElementsByName('hasil')[0].value = '';
+      }
+    </script>
+  </body>
+</html>
